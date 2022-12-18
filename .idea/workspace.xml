@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b8c0e0b-9991-449c-8593-5d6b369c3498" name="Changes" comment="Initial commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task6.py" beforeDir="false" afterPath="$PROJECT_DIR$/task6.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task8.py" beforeDir="false" afterPath="$PROJECT_DIR$/task8.py" afterDir="false" />
-    </list>
+    <list default="true" id="7b8c0e0b-9991-449c-8593-5d6b369c3498" name="Changes" comment="Deleting useful files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,6 +199,7 @@
       <workItem from="1671111204229" duration="13428000" />
       <workItem from="1671130465809" duration="6299000" />
       <workItem from="1671386432973" duration="3000" />
+      <workItem from="1671386704451" duration="582000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1671130599206</created>
@@ -211,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671130599206</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Deleting useful files">
+      <created>1671386776631</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671386776631</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,7 +258,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Deleting useful files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleting useful files" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/lessons$task8.coverage" NAME="task8 Coverage Results" MODIFIED="1671136325794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
