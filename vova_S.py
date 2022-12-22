@@ -199,3 +199,215 @@ import math
 #
 #     if k == 6:
 #         break
+
+
+# print(text)
+
+# file = open("data.txt")
+# text = file.read()
+# file.close()
+#
+# cnt = 0
+# maximum = 0
+# for i in range(len(text)):    # ZZZZZXXXXZZZZZZXXZZZZZZZZXXXXXXXX
+#     if text[i] == "X":
+#         cnt += 1
+#     else:
+#         maximum = max(maximum, cnt)
+#         cnt = 0
+#
+# print(max(maximum, cnt))
+
+# import re
+#
+# file = open("data.txt")
+# text = file.read()
+# file.close()
+#
+# print(
+#     len(
+#         max(
+#             re.findall("X+", text),
+#             key=len
+#         )
+#     )
+# )
+
+# A+ - 1 или больше вхождений А
+# A* - 0 или больше вхождений А
+# A? - 0 или 1 вхождение А
+# [A, B, C] [A-Za-z] [0-9] [А-Яа-я] [A-Za-z0-9]
+# [A-Z]+ - 1 или больше вхождение латинской заглавной буквы
+#
+
+# file = open("24_2.txt")
+# text = file.read()
+# file.close()
+#
+# cnt = 0
+# maximum = 0
+# for i in range(len(text)):
+#     if text[i] != "X":
+#         cnt += 1
+#     else:
+#         maximum = max(maximum, cnt)
+#         cnt = 0
+#
+# print(max(maximum, cnt))  # 24
+
+# file = open("24_2.txt")
+# text = file.read().split("X")  # YZYYZYZYYZYZ  split(N) - разделить по подстроке N
+# file.close()
+#
+# print(len(max(text, key=len)))  # 24
+# YZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
+# ZYYYYYYYYYY
+
+# file = open("24_3.txt")
+# text = file.read()
+# file.close()
+#
+# cnt = 0
+# maximum = 0
+# for i in range(len(text)):
+#     # Way 1
+#     if text[i] != "A" and text[i] != "F":
+#         cnt += 1
+#     else:
+#         maximum = max(maximum, cnt)
+#         cnt = 0
+#
+#     # Way 2
+#     # if text[i] == "A" or text[i] == "F":
+#     #     maximum = max(maximum, cnt)
+#     #     cnt = 0
+#     # else:
+#     #     cnt += 1
+#
+# print(max(maximum, cnt))  # 20
+
+# import statistics
+#
+# arr = [1, 3, 2, 5, 7, 1, 3, 2, 3, 3, 3, 6, 8, 100, 12, 2, 1, 1, 1]
+#
+# print(statistics.mean(arr))
+# print(sum(arr) / len(arr))
+#
+# import operator
+#
+# print("X Y X^Y")
+#
+# for i in range(2):
+#     for j in range(2):
+#         # print(i, j, i == 1 and j != 1 or i != 1 and j == 1)
+#         # print(i, j, operator.xor(i, j))
+#         print(i, j, i^j)
+
+# def add(n1, n2):
+#     res = n1 ^ n2
+#     corr = (n1 & n2) << 1
+#     while corr:
+#         temp = res
+#         res = res ^ corr
+#         corr = (corr & temp) << 1
+#     return res
+#
+# print(add(5, -7))
+
+# a = 1
+# print(a)
+# a = "Hello"
+# print(a)
+
+# a = [1, 2, 3]
+# print(a)
+# a.append(4)
+# print(a)
+
+# from string import digits
+#
+# file = open("24_4.txt")
+# text = file.read()
+# file.close()
+#
+# cnt = 0
+# maximum = 0
+# for i in range(len(text)):
+#     if text[i] in digits[1::2]:  # Way 2: int(text[i]) % 2 != 0  Way 3: text[i] in "13579"
+#         cnt += 1
+#     else:
+#         maximum = max(maximum, cnt)
+#         cnt = 0
+#
+# print(max(maximum, cnt))  # 13
+
+# file = open("24_5.txt")
+# text = file.read()
+# file.close()
+#
+# cnt = 0
+# for i in range(len(text) - 2):
+#     if (
+#             text[i] == text[i+2] and
+#             text[i+1] in "FDE" and
+#             text[i+2] in "BCD" and
+#             text[i+2] != text[i+1]
+#     ):  # i i+1 i+2
+#         cnt += 1
+#
+# print(cnt)  # 2417
+
+# file = open("448249e7-9baa-4c99-9717-b3a4c4a210fc.txt")
+# text = file.read()
+# file.close()
+#
+# cnt = 1
+# maximum = 0
+# for i in range(len(text) - 1):  # XYXYXZYZXYY
+#     if (
+#             text[i] in "XYZ" and
+#             text[i+1] in "XYZ" and
+#             text[i] != text[i+1]
+#     ):
+#         cnt += 1
+#     else:
+#         maximum = max(maximum, cnt)
+#         cnt = 1
+#
+# print(max(maximum, cnt))  # 15
+
+# from string import digits
+#
+# file = open("6f44e6ab-be6c-4fbc-b22a-1bb75346e6b8.txt")
+# text = file.read()
+# file.close()
+#
+# cnt = 0
+# maximum = 0
+# for i in range(len(text)):
+#     if text[i] in digits[1::2]:  # Way 2: text[i] in "13579"
+#         cnt += 1
+#     else:
+#         maximum = max(maximum, cnt)
+#         cnt = 0
+#
+# print(max(maximum, cnt))  # 3
+
+# from string import digits, ascii_letters
+# from random import choices
+
+# file = open("521c145b-a2cb-40bf-aee9-69ff7ca29528.txt")
+# text = file.read()
+# file.close()
+
+# print("".join(choices(digits + ascii_letters, k=10)))
+
+# import pyautogui
+# import time
+#
+# time.sleep(5)
+#
+# for i in range(10):
+#     pyautogui.typewrite("Hello")
+#     pyautogui.press("enter")
+#     time.sleep(0.01)

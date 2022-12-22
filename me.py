@@ -115,3 +115,26 @@
 #     if f(i, 1) and not g(i, 1):
 #         print(i)
 
+# import string
+# import random
+from pyautogui import press, typewrite
+from time import sleep
+
+sleep(6)
+
+for i in range(498):
+    typewrite("spam")
+    press("enter")
+    sleep(0.05)
+
+# print("".join(
+#     random
+#     .choices(
+#         string.ascii_letters +
+#         string.digits +
+#         string.punctuation,
+#         k=10
+#     )
+# ))
+
+
