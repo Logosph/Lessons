@@ -117,15 +117,15 @@
 
 # import string
 # import random
-from pyautogui import press, typewrite
-from time import sleep
-
-sleep(6)
-
-for i in range(498):
-    typewrite("spam")
-    press("enter")
-    sleep(0.05)
+# from pyautogui import press, typewrite
+# from time import sleep
+#
+# sleep(6)
+#
+# for i in range(498):
+#     typewrite("spam")
+#     press("enter")
+#     sleep(0.05)
 
 # print("".join(
 #     random
@@ -137,4 +137,46 @@ for i in range(498):
 #     )
 # ))
 
+string = '''to abolish – отменять, упразднять
+as a result – в результате
+authorities – власть, администрация
+autonomous – автономный
+to award – присуждать, награждать
+to be available – быть доступным
+to validate – придавать юридическую силу, подтверждать
+binary – двойной
+to confer a degree – присуждать степень
+to empower – уполномочивать, разрешать
+to examine – рассматривать
+local university – местный университет
+merger – объединение
+obvious – явный, очевидный
+postgraduate course – аспирантура
+to provide – обеспечивать
+qualification – квалификация
+to subdivide – подразделить
+university status – университетский статус
+to abolish – отменять, упразднять
+as a result – в результате
+authorities – власть, администрация
+autonomous – автономный
+to award – присуждать, награждать
+to be available – быть доступным
+to validate – придавать юридическую силу, подтверждать
+binary – двойной
+to confer a degree – присуждать степень
+to empower – уполномочивать, разрешать
+to examine – рассматривать
+local university – местный университет
+merger – объединение
+obvious – явный, очевидный
+postgraduate course – аспирантура
+to provide – обеспечивать
+qualification – квалификация
+to subdivide – подразделить
+university status – университетский статус'''.split("\n")
 
+string = list(map(lambda x: x.split(' – ')[::-1], string))
+
+for i in string:
+    print(*i, sep='-')
