@@ -141,25 +141,59 @@
 #         print(k, i)
 #     k += 1
 
-def foo(x):
-    return x % 2 != 0
+# def foo(x):
+#     return x % 2 != 0
+#
+# for i in range(95632, 95651):
+#     dividers = [1, i]
+#     for j in range(2, int(i ** 0.5) + 1):
+#         if i % j == 0:
+#             dividers.append(j)
+#             if i // j != j:
+#                 dividers.append(i // j)
+#
+#     divs_nechet = [k for k in dividers if k % 2 != 0]
+#
+#     # divs_nechet = list(filter(lambda x: x % 2 != 0, dividers))
+#     #
+#     # divs_nechet = []
+#     # for k in dividers:
+#     #     if i % 2 != 0:
+#     #         divs_nechet.append(i)
+#
+#     if len(divs_nechet) == 6:
+#         print(*sorted(divs_nechet))
 
-for i in range(95632, 95651):
-    dividers = [1, i]
-    for j in range(2, int(i ** 0.5) + 1):
-        if i % j == 0:
-            dividers.append(j)
-            if i // j != j:
-                dividers.append(i // j)
+# Перебрать все числа больше 1234 и остановиться после пяти чисел, кратных 6
 
-    divs_nechet = [k for k in dividers if k % 2 != 0]
+# Way 1
+# from itertools import count
+#
+# cnt = 0
+# for i in count(1234):
+#     if i % 6 == 0:
+#         print("NUMBER", end=' ')
+#         cnt += 1
+#     print(i)
+#     if cnt == 5:
+#         break
 
-    # divs_nechet = list(filter(lambda x: x % 2 != 0, dividers))
-    #
-    # divs_nechet = []
-    # for k in dividers:
-    #     if i % 2 != 0:
-    #         divs_nechet.append(i)
+# Way 2
+# cnt = 0
+# for i in range(1234, 99999999999999999999999999999999999999999999999999999):
+#     if i % 6 == 0:
+#         print("NUMBER", end=' ')
+#         cnt += 1
+#     print(i)
+#     if cnt == 5:
+#         break
 
-    if len(divs_nechet) == 6:
-        print(*sorted(divs_nechet))
+# Way 3
+# cnt = 0
+# i = 1234
+# while cnt < 5:
+#     if i % 6 == 0:
+#         print("NUMBER", end=' ')
+#         cnt += 1
+#     print(i)
+#     i += 1

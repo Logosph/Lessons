@@ -48,3 +48,51 @@
 #         print(f(i))
 #         break
 
+# and, or, xor, ==, -->
+# и      and
+# но      and                   А(у квадрата 4 стороны,) но Б(у треугольника две стороны) = ложь
+# хотя бы      or
+# только одно      xor
+# если ... то     -->
+# тогда и только тогда когда     ==
+# а      and
+# либо... либо...     xor
+
+# xor - исключающеее ИЛИ
+# A B F
+# 0 0 0
+# 0 1 1
+# 1 0 1
+# 1 1 0
+
+
+# file = open("data.txt")
+# data = [int(i) for i in file]  # -67, -694, 835, 786, -457, 495, -699, -592, -405, -745, 656
+# file.close()
+#
+# cnt = 0  # cnt - count
+# mx = 0
+# for i in range(len(data) - 1):
+#     if data[i] % 3 == 0 or data[i + 1] % 3 == 0:
+#         cnt += 1
+#         mx = max(mx, data[i] + data[i + 1])
+#
+# print(cnt, mx)
+
+file = open("data.txt")
+data = [int(i) for i in file]  # 5500, 6971, 3572, 7600, 2822, 5687, 9741, 8623, 7954, 1029, 9913, 380, 7965, 3679,
+file.close()
+
+d = 160
+p = 7
+
+cnt = 0
+mx = 0
+
+for i in range(len(data) - 1):
+    for j in range(i + 1, len(data)):
+        if data[i] % d != data[j] % d and (data[i] % p == 0 or data[j] % p == 0):
+            cnt += 1
+            mx = max(mx, data[i] + data[j])
+
+print(cnt, mx)

@@ -137,46 +137,77 @@
 #     )
 # ))
 
-string = '''to abolish – отменять, упразднять
-as a result – в результате
-authorities – власть, администрация
-autonomous – автономный
-to award – присуждать, награждать
-to be available – быть доступным
-to validate – придавать юридическую силу, подтверждать
-binary – двойной
-to confer a degree – присуждать степень
-to empower – уполномочивать, разрешать
-to examine – рассматривать
-local university – местный университет
-merger – объединение
-obvious – явный, очевидный
-postgraduate course – аспирантура
-to provide – обеспечивать
-qualification – квалификация
-to subdivide – подразделить
-university status – университетский статус
-to abolish – отменять, упразднять
-as a result – в результате
-authorities – власть, администрация
-autonomous – автономный
-to award – присуждать, награждать
-to be available – быть доступным
-to validate – придавать юридическую силу, подтверждать
-binary – двойной
-to confer a degree – присуждать степень
-to empower – уполномочивать, разрешать
-to examine – рассматривать
-local university – местный университет
-merger – объединение
-obvious – явный, очевидный
-postgraduate course – аспирантура
-to provide – обеспечивать
-qualification – квалификация
-to subdivide – подразделить
-university status – университетский статус'''.split("\n")
+# string = '''ability – способность
+# abroad – за границей
+# access – доступ
+# advantage – преимущество
+# amateur – любитель, непрофессионал
+# apparent – очевидный, явный
+# to be essential – быть существенным
+# to be worth – иметь ценность
+# to change – менять, изменять
+# communication – информация; коммуникация
+# confirm – подтверждать
+# contemporary – современный
+# demand – требование
+# experience – опыт
+# experienced specialist – опытный специалист
+# fashion – мода
+# to get acquainted with – познакомиться
+# to insist on – настаивать на чемлибо
+# interpreter – переводчик
+# mentality – склад ума
+# negotiations – переговоры
+# to notice – замечать
+# opportunity – возможность
+# to realize – понимать, осознавать
+# to require – требовать
+# to spend – тратить, расходовать
+# stable – стойкий; устойчивый
+# stylish – стильный, модный
+# to sum up – суммировать; обобщать
+# tolerance – терпимость; толерантность
+# to travel – путешествовать
+# to understand – понимать
+# valuable – ценный
+# vision – видение
+# vulnerable – уязвимый, ранимый
+# to waste time – зря тратить время'''.split("\n")
+#
+# string = list(map(lambda x: x.split(' – ')[::-1], string))
+#
+# for i in string:
+#     print(*i, sep='-')
 
-string = list(map(lambda x: x.split(' – ')[::-1], string))
+# import numpy
+#
+# def reset_array(arr: numpy.array) -> None:
+#     for i in range(arr.size):
+#         arr.put(i, 0)
 
-for i in string:
-    print(*i, sep='-')
+# def radix_sort(arr: list[int, ...], base = 10) -> None:
+#     max_digits = max(arr, key=lambda x: len(str(x)))
+#     bins = numpy.array([numpy.array([0]*len(arr))]*base)
+#     for i in range(max_digits):
+#         for j in range(len(arr)):
+#             bins.
+
+# print(radix_sort([1, 2, 3]))
+# bins = numpy.array([numpy.array([i for i in range(5)])]*7)
+# print(bins[2][1])
+
+# def six_angle_number():
+#     num = 1
+#     k = 1
+#     while True:
+#         yield num
+#         num += 6 * k
+#         k += 1
+#
+#
+# gen = six_angle_number()
+# print(type(gen))
+# for i in range(10):
+#     print(gen.__next__())
+
+
