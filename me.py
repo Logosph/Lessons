@@ -210,4 +210,71 @@
 # for i in range(10):
 #     print(gen.__next__())
 
+# import time
+# import pyautogui
+#
+# time.sleep(4)
+#
+# for i in range(10000):
+#     pyautogui.rightClick()
+#     time.sleep(0.005)
+
+# import turtle
+#
+# t = turtle.Pen()  # Создаём черепаху
+# t.left(90)  # Поворачиваем черепаху вертикально вверх, как в задании
+# t.speed(1000)  # Скорость повыше чтобы не ждать ответа ~100500 лет
+# k = 6  # Коэффициент увеличения рисунка. Для корректного подсчёта должен быть 100,
+# # но поначалу рекомендую ставить 1, чтобы посмотреть, адекватный ли рисунок выходит
+#
+# # Просто рисуем то, что сказано в задании
+# t.begin_fill()  # Нам нужно закрасить фигуру
+# for i in range(6):  # Тут надо выставить такое количество повторов, чтобы фигура рисовалась только один раз!!!
+#                     # Чтобы она не обводила себя несколько раз, внимательно следите!
+#     t.right(36)
+#     t.forward(10 * k)
+#     t.right(36)
+# t.end_fill()
+#
+# #
+#
+# turtle.mainloop()
+
+# import string
+#
+# def caesar(word, rot=1):
+#     result = ""
+#     for i in word:
+#         if i in string.ascii_uppercase:
+#             result += string.ascii_uppercase[(string.ascii_uppercase.index(i) + rot) % 26]
+#         elif i in string.ascii_lowercase:
+#             result += string.ascii_lowercase[(string.ascii_lowercase.index(i) + rot) % 26]
+#         else:
+#             result += i
+#     return result
+#
+#
+# print(caesar("flag_..._cHaneL_..._..._...", -1))
+
+# import random
+#
+# flag = "<DELETED>"
+#
+# if __name__ == "__main__":
+#     key = random.randint(1, 1024)
+#     encrypted = ""
+#     for i in flag:
+#         encrypted += str(ord(i) ^ key) + " "
+#     print(encrypted)
+
+# nums = [51, 57, 52, 50, 10, 123, 123, 123, 10, 123, 123, 123, 10, 3, 60, 5, 10, 123, 123, 123, 10, 123, 123, 123]
+# key = 85
+#
+# res = ''
+#
+# for i in nums:
+#     res += chr(i ^ key)
+#
+# print(res)
+
 

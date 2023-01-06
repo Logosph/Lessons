@@ -197,3 +197,127 @@
 #         cnt += 1
 #     print(i)
 #     i += 1
+
+# a = []
+# print(min(a))
+
+# min: 2
+# max: 15
+# +1
+# +3
+
+# def f(n):
+#     if n > 15:
+#         return 0
+#     elif n == 15:
+#         return 1
+#     else:
+#         return f(n + 1) + f(n + 3)
+#
+#
+# print(f(2))
+
+# def f(n, m):
+#     if n > m:
+#         return 0
+#     elif n == m:
+#         return 1
+#     else:
+#         return f(n + 1, m) + f(n + 3, m)
+#
+#
+# print(f(2, 15))
+
+# 1. Прибавить 1
+# 2. Прибавить 2
+# 3. Умножить на 2
+# Сколько существует таких программ, которые исходное число 3 преобразуют в число 12 и
+# при этом траектория вычислений программы содержит число 10?
+
+# def f(n):
+#     if n > 12:  # заменили 10 на 12
+#         return 0
+#     elif n == 12:  # заменили 10 на 12
+#         return 1
+#     else:
+#         return f(n + 1) + f(n + 2) + f(n * 2)
+#
+# print(f(10))  # 30 * 2 = 60
+
+# def f(n, m):
+#     if n > m:
+#         return 0
+#     elif n == m:
+#         return 1
+#     else:
+#         return f(n + 1, m) + f(n + 2, m) + f(n * 2, m)
+#
+# print(f(3, 10) * f(10, 12))
+
+# 1. прибавь 1
+# 2. сделай нечётное
+# Сколько существует таких программ, которые число 1 преобразуют в
+# число 27, причём траектория вычислений не содержит число 26?
+
+# def f(n, m):
+#     if n > m or n == 26:
+#         return 0
+#     elif n == m:
+#         return 1
+#     else:
+#         return f(n + 1, m) + f(n * 2 + 1, m)
+#
+# print(f(1, 27))
+
+# 1. Прибавить 1
+# 2. Прибавить 2
+# Сколько существует программ, которые преобразуют исходное число 3 в число 20 и при
+# этом траектория вычислений содержит число 9 и не содержит числа 15?
+
+# 0 1 1 2 3 5 8 13 21 34 55 89
+
+# def f(n, m):
+#     if n > m or n == 15:
+#         return 0
+#     elif n == m:
+#         return 1
+#     else:
+#         return f(n + 1, m) + f(n + 2, m)
+#
+# print(f(3, 9) * f(9, 20))
+# a += 10 ** (len(str(a)) - 1)
+#
+# print(a)
+# a = int(input())
+
+
+# def f(n, m):
+#     if n > m:
+#         return 0
+#     elif n == m:
+#         return 1
+#     else:
+#         return f(n + 2, m) + f(n + 10, m)
+#
+# print(f(5, 141))
+# d = {5: 1}
+# for i in range(6, 142):
+#     tmp = 0
+#     if i - 2 in d:
+#         tmp += d[i - 2]
+#     if i - 10 in d:
+#         tmp += d[i - 10]
+#     d[i] = tmp
+#
+# print(d)
+
+# def f(n, m):
+#     if n > m:
+#         return 0
+#     elif n == m:
+#         return 1
+#     else:
+#         return f(n + 1, m) + f(n * 5, m) + (f(n*10 + 1, m) if (n * 10 + 1) % 3 == 0 else 0)
+#
+#
+# print(f(1, 410))
