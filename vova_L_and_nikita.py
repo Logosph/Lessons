@@ -179,13 +179,318 @@
 #     else:
 #         print(A)
 
-a = 100
-b = 30
+# a = 100
+# b = 30
+#
+# a_bin = bin(a)[2:]
+# b_bin = bin(b)[2:]
+#
+# print(a_bin)
+# print("00"+b_bin)  # 100 = 4
+#
+# print(a & b)
 
-a_bin = bin(a)[2:]
-b_bin = bin(b)[2:]
 
-print(a_bin)
-print("00"+b_bin)  # 100 = 4
+# Найти самую длинную последовательность из В
+# a = "ABBAABABABBBABBBBABBABABABABBBAAABABBABAAAABBABAAAAAAA"
+# maxx = 0
+# cnt = 0
+# for i in a:
+#     if i == "A":
+#         cnt += 1
+#     else:
+#         maxx = max(maxx, cnt)
+#         cnt = 0
+# print(max(maxx, cnt))
 
-print(a & b)
+# Найти самую длинную последовательность ABABA...
+
+# a = "ABABABABAAABABBBBABABBABABABABABABABABBAAABABABABABABABBABABA"
+# XYZXYZXYZXYZ
+
+# maxx = 0
+# cnt = 1
+# # Way 1
+# for i in range(1, len(a)):
+#     if a[i] != a[i - 1]:
+#         cnt += 1
+#     else:
+#         maxx = max(maxx, cnt)
+#         cnt = 1
+#
+# print(max(maxx, cnt))
+
+# maxx = 0
+# cnt = 1
+# # Way 2
+# for i in range(0, len(a) - 1):
+#     if a[i] != a[i + 1]:
+#         cnt += 1
+#     else:
+#         maxx = max(maxx, cnt)
+#         cnt = 1
+
+# a = "ABABABABAAABABBBBABABBAABABABABABABABABBAAABABABABABABABBABABA"
+# maxx = 0
+# cnt = 0
+# for i in range(0, len(a)):
+#     if cnt == 0 and a[i] == "A":
+#         cnt = 1
+#     elif cnt != 0 and (a[i] != a[i - 1]):
+#         cnt += 1
+#     else:
+#         maxx = max(maxx, cnt)
+#         if a[i] == "A":
+#             cnt = 1
+#         else:
+#             cnt = 0
+#
+# print(max(maxx, cnt))
+
+# a = "XYZXYZXYZXYXYYXYZYXZYXYZXYZXYZXYZXYZXYZXZYZYXYZYXYZXYZXYZXY"  # заменить XYZ на какой-то символ
+#
+# a = a.replace("XYZ", "!")  # 6 * 3 = 18
+# maxx = 0
+# cnt = 0
+# for i in a:
+#     if i == "!":
+#         cnt += 1
+#     else:
+#         maxx = max(maxx, cnt)
+#         cnt = 0
+#
+# print(max(maxx, cnt))
+#
+# f = open("24_demo (5).txt")
+# text = f.read()
+# f.close()
+#
+# cnt = 0  # XYZXYZXYZXYZ -> X - 0 3 6 9 - %3 == 0; Y - 1 4 7 10 - %3 == 1; Z - 2 5 8 11 - %3 == 2 YYZXYZXYZXYZ
+# mx = 0
+#
+# for i in range(len(text)):
+#     if (
+#         text[i] == "X" and cnt % 3 == 0 or
+#         text[i] == "Y" and cnt % 3 == 1 or
+#         text[i] == "Z" and cnt % 3 == 2
+#     ):
+#         cnt += 1
+#     else:
+#         mx = max(mx, cnt)
+#         cnt = 0
+#
+# print(max(mx, cnt))
+
+# print("XYZXYZXYZXYZX" in text)
+
+# text = text.replace("XYZ", "*")
+# cnt = 0
+# mx = 0
+# for i in range(len(text)):
+#     if text[i] == "*":
+#         cnt += 1
+#     else:
+#         mx = max(mx, cnt)
+#         cnt = 0
+# print(max(mx, cnt))
+#
+#
+# print(text)  # **** == XYZXYZXYZXYZ
+
+
+# file = open("inf_22_10_20_24 (1).txt")
+# cnt = 0
+#
+# for i in file:
+#     if i.count("E") > i.count("A"):
+#         cnt += 1
+#
+# print(cnt)
+# file.close()
+
+# Другие способы (они никому не понравились)
+# file = open("inf_22_10_20_24 (1).txt")
+# cnt = 0
+# string = file.readline()
+#
+# while string:
+#     if string.count("E") > string.count("A"):
+#         cnt += 1
+#     string = file.readline()
+#
+# print(cnt)
+# file.close()
+#
+#
+# file = open("inf_22_10_20_24 (1).txt")
+# text = file.readlines()
+# file.close()
+#
+# cnt = 0
+# for i in range(len(text)):
+#     if text[i].count("E") > text[i].count("A"):
+#         cnt += 1
+#
+# print(cnt)
+#
+#
+# file = open("inf_22_10_20_24 (1).txt")
+# text = file.readlines()
+# file.close()
+#
+# cnt = 0
+# for i in text:
+#     if i.count("E") > i.count("A"):
+#         cnt += 1
+#
+# print(cnt)
+
+# file = open("24 (2).txt")
+# text = file.read()
+# file.close()
+#
+# cnt = [0] * 26
+#
+# for i in range(len(text) - 1):
+#     if text[i] == "A":
+#         cnt[ord(text[i+1]) - ord("A")] += 1  # ord("A") = 65
+#
+# print(cnt)
+# print(cnt.index(max(cnt)))  # g
+# print(chr(cnt.index(max(cnt)) + ord("A")))  # g
+#
+# file = open("24 (2).txt")
+# text = file.read()
+# file.close()
+#
+# d = {}  # key: value
+#
+# for i in range(len(text) - 1):
+#     if text[i] == "A":
+#         d[text[i + 1]] = d.get(text[i + 1], 0) + 1
+#
+# mx = "A"
+# for i in d:
+#     if d[i] > d[mx]:
+#         mx = i
+#
+# print(mx)
+
+# print(max(d, key=d.get))
+
+# d = {
+#     "cat":      1,
+#     2:          ["dog", "cat", "duck"],
+#     True:       "15",
+#     False:      16,
+#     (1, 2, 3):  [4, 5, 6]
+# }
+#
+# print(d.get(2, 0)[2])
+
+# file = open("24 (2).txt")
+# str_min_g = file.readline()
+#
+# for i in file:
+#     if i.count("G") < str_min_g.count("G"):
+#         str_min_g = i
+#
+# d = {}
+#
+# for i in range(len(str_min_g)):
+#     d[str_min_g[i]] = d.get(str_min_g[i], 0) + 1
+#
+# mx_letter = "A"
+# for i in d:
+#     if d[i] >= d[mx_letter]:
+#         if d[i] == d[mx_letter] and i > mx_letter or d[i] > d[mx_letter]:
+#             mx_letter = i
+#
+# print(mx_letter)
+
+# file = open("24 (2).txt")
+# str_min_g = file.readline()
+#
+# # Поиск строки с минимальным количеством букв G
+# for i in file:
+#     if i.count("G") < str_min_g.count("G"):
+#         str_min_g = i
+#
+# # Подсчёт количества всех букв
+# a = [0] * 26
+# for i in range(len(str_min_g) - 1):
+#     a[ord(str_min_g[i]) - ord("A")] += 1
+#
+# # Поиск буквы которая встречается чаще всего
+# mx = 0
+# mx_index = 0
+# for i in range(len(a)):
+#     if a[i] >= mx:
+#         mx = a[i]
+#         mx_index = i
+#
+# print(chr(mx_index + ord("A")))
+
+
+# Обозначим через m & n поразрядную конъюнкцию неотрицательных целых чисел m и n.
+# Так, например, 14 & 5 = 1110_2 & 0101_2 = 0100_2 = 4.
+# Для какого наименьшего неотрицательного целого числа А формула
+# x & 29 ≠ 0 → (x & 17 = 0 → x & А ≠ 0)  # 29 17
+# тождественно истинна (т.е. принимает значение 1 при любом неотрицательном целом значении переменной x)?
+
+# for A in range(0, 10000):
+#     flag = True   # Флаг поднят
+#     for x in range(0, 300):  # Показать, что будет, если взять перебор слишком большим
+#         if (x & 29 != 0) <= ((x & 17 == 0) <= (x & A != 0)):
+#             pass
+#         else:
+#             flag = False  # Флаг опущен
+#
+#     if flag == True:
+#         print(A)
+#         break
+
+
+# Для какого наименьшего неотрицательного целого числа А формула
+# x&25 ≠ 0 → (x&17 = 0 → x&А ≠ 0)
+# тождественно истинна (т.е. принимает значение 1 при любом неотрицательном целом значении переменной х)?
+
+# for A in range(0, 10000):
+#     flag = True
+#     for x in range(0, 300):
+#         if (x & 25 != 0) <= ((x & 17 == 0) <= (x & A != 0)):
+#             pass
+#         else:
+#             flag = False
+#
+#     if flag == True:
+#         print(A)
+#         break
+
+# Для какого наибольшего целого числа А формула
+# ((x ≤ 9) →(x ⋅ x ≤ A)) ⋀ ((y ⋅ y ≤ A) → (y ≤ 9))
+# тождественно истинна, то есть принимает значение 1 при любых целых неотрицательных x и y?
+
+# for A in range(0, 10000):
+#     flag = True
+#     for x in range(300):
+#         for y in range(300):
+#             if ((x <= 9) <= (x * x <= A)) and ((y * y <= A) <= (y <= 9)):
+#                 pass
+#             else:
+#                 flag = False
+#     if flag:
+#         print(A)
+
+# ¬ДЕЛ(x, А) → (ДЕЛ(x, 6) → ¬ДЕЛ(x, 4))
+for A in range(1, 10000):
+    flag = True
+    for x in range(1, 1000):
+        if (not (x % A == 0)) <= ((x % 6 == 0) <= (x % 4 != 0)):
+            pass
+        else:
+            flag = False
+    if flag:
+        print(A)
+# Обозначим через ДЕЛ(n, m) утверждение «натуральное число n делится без остатка на натуральное число m».
+# n % m == 0

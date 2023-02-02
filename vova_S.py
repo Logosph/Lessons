@@ -411,3 +411,206 @@ import math
 #     pyautogui.typewrite("Hello")
 #     pyautogui.press("enter")
 #     time.sleep(0.01)
+
+# def f(n):
+#     r = bin(n)[2:]
+#     s = 0
+#     # Way 1
+#     # while n != 0:
+#     #     s += n % 10
+#     #     n //= 10
+#     for i in str(n):  # "1234"
+#         s += int(i)
+#     # for i in range(0, 10):  # 1232345  -> 3 + 3 = 3 * (1 +  = 3 * k = i * k
+#     #     s += i * str(n).count(str(i))
+#     print(s)
+#
+# f(12345)
+
+# import itertools
+#
+# a = itertools.product("12", repeat=20)  # 0111222111222111222120
+# a_perms = set()
+# for i in a:
+#     if i.count("1") == 10 and i.count("2") == 10:
+#         a_perms.add("".join(i))
+#
+# minn = 99999999999999999999999999999999999999999999999999999999
+# for i in a_perms:
+#     s = "0" + i + "0"
+#     while "00" not in s:
+#         s = s.replace("012", '30', 1)
+#         if "011" in s:
+#             s = s.replace("011", "20", 1)
+#             s = s.replace("022", "40", 1)
+#         else:
+#             s = s.replace("01", "10", 1)
+#             s = s.replace("02", "101", 1)
+#     if s.count("1") == 7 and s.count("2") == 5:
+#         minn = min(minn, s.count("3"))
+#
+# print(minn)
+
+# for x in range(0, 37):
+#     num1 = \
+#         1 * 37 ** 3 + \
+#         2 * 37 ** 2 + \
+#         3 * 37 ** 1 + \
+#         x * 37 ** 0
+#     num2 = \
+#         4 * 37 ** 3 + \
+#         x * 37 ** 2 + \
+#         5 * 37 ** 1 + \
+#         9 * 37 ** 0
+#     summ = num1 + num2
+#     if summ % 36 == 0:
+#         print(summ // 36)
+
+
+# for i in range(10):
+#     print("Hello")
+#     if i == 5:
+#         break
+# else:
+#     print("Wow")
+
+# for A in range(-100, 150):
+#     for x in range(1, 300):
+#         for y in range(1, 300):
+#             if ((144 % x == 0) <= (not (x, y))) or (x + y > 100) or (A - x > y):
+#                 pass
+#             else:
+#                 break
+#         else:
+#             continue
+#         break
+#     else:
+#         print(A)
+#
+# for A in range(-100, 120):
+#     flag = True
+#     for x in range(1, 300):
+#         for y in range(1, 300):
+#             if ((144 % x == 0) <= (not (x % y == 0))) or (x + y > 100) or (A - x > y):
+#                 pass
+#             else:
+#                 flag = False
+#                 break
+#     if flag == True:
+#         print(A)
+
+# def f(n: int) -> int:
+#     r = bin(n)[2:]
+#     return n - int(r[1:], 2)
+#
+#
+# arr = []
+# for i in range(10, 1001):
+#     arr.append(f(i))
+#
+# s = set(arr)
+# print(arr)
+# print(len(s))
+
+# def f(n: int) -> int:
+#     r = bin(n)[2:]
+#     r = r[::-1]
+#     return int(r, 2)
+#
+#
+# for i in range(1, 100):
+#     if f(i) == 13:
+#         print(i)
+
+
+# 88x4y_9 + 7x44y_11
+# В записи чисел переменными x и y обозначены допустимые в данных системах счисления неизвестные цифры.
+# Определите значения x и y, при которых значение данного арифметического выражения будет наименьшим и
+# кратно 61. Для найденных значений x и y вычислите частное от деления значения арифметического выражения
+# на 61 и укажите его в ответе в десятичной системе счисления.
+
+# for x in "012345678":
+#     for y in "012345678":
+#         num1 = "88" + x + "4" + y
+#         num2 = "7" + x + "44" + y
+#         summa = int(num1, 9) + int(num2, 11)
+#         if summa % 61 == 0:
+#             print(summa // 61)
+
+# for x in "012345678":
+#     for y in "012345678":
+#         num1 = \
+#             8 * 37 ** 4 + \
+#             8 * 37 ** 3 + \
+#             x * 37 ** 2 + \
+#             4 * 37 ** 1 + \
+#             y * 37 ** 0
+
+# a = 4 ** 2020 + 2 ** 2017 - 15
+# a_bin = bin(a)[2:]
+#
+# print(a_bin.count("1"))
+
+# a = 7 * 512 ** 120  - 6 * 64 ** 100 + 8 ** 210 - 255
+# a_oct = oct(a)[2:]
+# print(a_oct.count("0"))
+
+# a = 4 ** 36 + 3 * 4 ** 20 + 4 ** 15 + 2 * 4 ** 7 + 49
+# a_hex = set(hex(a)[2:])
+# print(len(a_hex))
+
+# def tri(n):
+#     res = ""
+#     while n != 0:
+#         res += str(n % 3)
+#         n //= 3
+#     res = res[::-1]
+#     return res
+#
+# a = 9**8 + 3 ** 5 - 9
+# a_tri = tri(a)
+# print(a_tri.count("2"))
+
+# ДЕЛ(n, m) обозначает выражение "натуральное число n делится на натуральное число m без остатка"
+# n % m == 0
+# ДЕЛ(n, m) <=> n % m == 0
+# ДЕЛ(A, x) <=> A % x == 0
+
+# factorial (9! = 1 * 2 * 3 * 4 * 5 * 6 * 7 * 8 * 9)
+
+# def fact(n):
+#     if n != 1:
+#         return n * fact(n-1)  # рекурсия
+#     else:
+#         return 1
+#
+# print(fact(1000))
+
+# fact(9)
+# 9 * 8 * 7 * 6...
+# 9 * fact(8)
+# fact(n) = n * fact(n-1)
+
+# def f(n):
+#     return f(n)
+#
+# f(10)
+
+# fact(10)  ->
+# 10 * fact(9)
+# 9 * fact(8)
+# 8 * fact(7)
+
+# F(1) = 1
+# F(2) = 3
+# F(n) = F(n–1) * n + F(n–2) * (n – 1) , при n >2
+
+# def f(n):
+#     if n == 1:
+#         return 1
+#     elif n == 2:
+#         return 3
+#     else:
+#         return f(n-1) * n + f(n - 1) * (n - 1)
+#
+# print(f(0))
